@@ -1,0 +1,1870 @@
+/* 
+Theme Name: Main (fic site)
+Theme URI: http://aroceu.com/fic
+Description: Theme for my fic. Custom taxonomies for fandom, ships (main fandoms and minor fandoms), relationship type/category, and ratings. Includes filtering options and explanations of each type of filter hard-coded in. Fandom list on main navigation pages as a sliding dropdown. Individual posts are similarly formatted to AO3, so readers don't have to adjust to a different way of interpreting metadata. Night mode work in progress.
+Version: 1.0
+Author: aroceu
+Author URI: http://aroceu.com
+*/
+
+:root{
+    
+    --back: #ffffff;
+    --text: #5a4a57;
+    --blue-dark: #589DB6;
+    --blue-normal: #98CADB;
+    --blue-banner: #98CADB;
+    --blue-light: #b2d9e7;
+    --orange: #ffcba7;
+    --pink-normal: #F5A49F;
+    --pink-light: #ffc7c3;
+    --pink-kinda-dark: #f0958f;
+    --text-light: #6e5f6b;
+    --text-light-2: #6c5e69;
+    --not-white: #fafafa;
+    --not-not-white: #eaeaea;
+    --still-not-white: #eee;
+    --star-yellow: #ffe6c7;
+    --text-lighter: #776874;
+    --text-lightest: #8f838d;
+    --not-grey: #ddd;
+    
+}
+
+[data-theme="dark"]{
+    --back: #332d31;
+    --text: #fbebd8;
+    --not-white: #41393f;
+    --not-not-white: #41393f;
+    --star-yellow: #826b7e;
+    --not-grey: #6e5f6b;
+    --still-not-white: #6e5f6b;
+    --text-lighter:  #f1e1cf;
+    --pink-light: #e27f79;
+    --pink-kinda-dark: #ffc7c3;
+    --blue-dark: #b2d9e7;
+    --blue-light: #548fa4;
+    --blue-banner: #243954;
+}
+
+.theme-switch-wrapper {
+      margin: 9px 20px;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #9de4ff;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #ffc600;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #304766;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#envirabox-wrap *{
+    color: var(--blue-normal);
+}
+
+html, body{
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	word-wrap: break-word;
+}
+
+body{
+	background: var(--back);
+	margin: 0;
+	padding: 0;
+	color: var(--text);
+	font: normal 100%/160% 'Open Sans', 'Lucida Grande', sans-serif;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body#index{
+	min-height: 100vh;
+}
+
+#borger, .borgerbutton{
+    display: none;
+}
+
+#filter{
+    display: none;
+}
+
+/**top part of main page (before content) **/
+
+#top{
+	width: 100%;
+	background: var(--back);
+	height: 50px;
+	position: fixed;
+	top: 0;
+	border-bottom: 5px solid var(--orange);
+	overflow-x: hidden;
+	z-index: 999;
+	overflow-y: clip;
+}
+
+#singletop{
+	width: 100%;
+	background: var(--back);
+	height: 50px;
+	border-bottom: 5px solid var(--orange);
+	overflow: hidden;
+	z-index: 999;
+}
+
+#top img, #singletop img{
+	border-radius: 150px;
+    height: 35px;
+    width: 35px;
+    padding: 8px;
+    float: left;
+}
+
+#icon{
+    float: left;
+    font: normal 280% 'Cookie', 'Georgia', cursive;
+}
+
+#icon a:link, #icon a:visited{
+    border-bottom: none;
+    color: var(--blue-dark);
+}
+
+#icon a:hover, #icon a:focus, #ficpage #icon a:hover, #ficpage #icon a:focus{
+    color: var(--pink-normal);
+    box-shadow: none!important;
+    border-bottom: none!important;
+}
+
+#navigation{
+    overflow-y: hidden;
+}
+
+#navigation ul{
+	list-style-type: none;
+	float: right;
+	margin-top: 0.7em;
+}
+
+#navigation ul li{
+	display: inline-block;
+	margin: 0 1em;
+}
+
+#navigation ul li a:link, #navigation ul li a:visited{
+	text-transform: lowercase;
+	border-bottom: none;
+	font: normal 220% 'Cookie', 'Georgia', cursive;
+	color: var(--pink-normal);
+}
+
+#navigation ul li a:hover, #navigation ul li a:focus{
+    color: var(--blue-normal);
+        box-shadow: none;
+}
+
+nav ul.menu{
+	list-style-type: none;
+	padding-inline-start: 0!important;
+	text-align: center;
+}
+
+nav ul.menu li a:link, nav ul.menu li a:visited{
+
+}
+
+nav ul.menu li a:hover, nav ul.menu li a:active, nav ul.menu li a:focus{
+	color: var(--blue-normal)!important;
+	box-shadow: none;
+}
+
+#fandoms{
+	background: var(--back);
+	font: normal 100%/160% 'Open Sans', 'Lucida Grande', sans-serif;
+	width: 100%;
+	padding: 0 0 1em;
+	display: none;
+}
+
+#fandoms ul{
+	margin-block-end: 0!important;
+	margin-block-start: 0!important;
+}
+
+#fandoms .inner{ 
+    padding: 1em 0 2em;
+    width: 70%;
+}
+
+.inner{ /**inner space of fandoms navigation as well as index page content **/
+	margin: 0 auto;
+}
+
+#content{
+    background: var(--back);
+    padding: 0;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#banner{
+	background: var(--blue-banner) url('stars-yellow.png') repeat;
+	    	border-top: 30px solid var(--orange);
+}
+
+#indexbanner{
+	background: url('banner.png') center no-repeat;
+	background-size: 50em;
+	height: 20em;
+}
+
+#pagebanner{ /**smaller banner for pages**/
+    background: url('banner.png') center no-repeat;
+	background-size: 20em;
+	height: 10em;
+}
+
+#banner{
+	margin-top: 50px;
+	clear: both;
+}
+
+#fandomnav{
+    height: 30px;
+    background: var(--orange);
+    text-transform: lowercase;
+}
+
+#fandomnav a:link, #fandomnav a:visited {
+    font: normal 220%/100% 'Cookie', 'Georgia', cursive;
+    border-bottom: none;
+    color: var(--text-light);
+    text-transform: lowercase;
+    float:right;
+}
+
+#closefandoms{
+    background: var(--pink-normal);
+    height: 30px;
+}
+
+#closefandoms a:link, #closefandoms a:visited{
+    font: normal 220%/100% 'Cookie', 'Georgia', cursive;
+    border-bottom: none;
+    color: var(--not-white);
+    text-transform: lowercase;
+    float:left;
+}
+
+#fandomnav a:hover, #closefandoms a:hover,#fandomnav a:focus, #closefandoms a:focus{
+    box-shadow: none;
+}
+
+#fandomnav a:hover, #fandomnav a:focus{
+    color: var(--not-white);
+}
+
+#closefandoms a:hover, #closefandoms a:focus{
+    color: var(--text-light);
+}
+
+#index #container ul{
+	list-style-type: none;
+	margin-bottom: 0;
+}
+
+#fandoms h1{
+	font: normal 180% 'Playfair Display', 'Georgia', serif;
+    margin: 0 0 0.5em;
+    padding: 0.5em 0 0;
+    box-shadow: inset 0 -15px var(--star-yellow);
+}
+
+/**for fandoms list **/
+
+ul.major{
+    padding-bottom: 1em;
+}
+
+ul.major li:first-child{
+	font-weight: bold;
+}
+
+ul.minor{
+	margin-top: 0;
+}
+
+ul.major li{
+	display: inline-block;
+	width: 33%;
+}
+
+ul.minor li{
+	display: inline-block;
+	width: 33%;
+}
+
+ul.pagelisttwocols li{
+    width: 49%;
+    display: inline-block;
+}
+
+/** content formatting begins **/
+
+#searchfilter{ /*filter sidebar**/
+float: right;
+    width: 23%;
+    position: sticky;
+    top: 50px;
+    right: 7vw;
+    padding-bottom: 5em;
+}
+
+.searchandfilter h4{
+    font: normal 150% 'Playfair Display', 'Georgia', serif!important;
+    box-shadow: inset 0px -10px 0 0px var(--star-yellow);
+    margin: 15px 0 10px;
+}
+
+.searchandfilter input{
+    border: none;
+    padding: 0.5em;
+    color: inherit;
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+    background: var(--pink-normal);
+    color: var(--back);
+}
+
+.searchandfilter input[type=submit]{
+    width: 100%;
+    margin-top: 1em;
+}
+
+.searchandfilter input[type=submit]:hover, .searchandfilter input[type=submit]:focus{
+    background: var(--blue-normal)!important;
+    border: none;
+}
+
+.searchandfilter ul {
+    display: block!important;
+}
+
+.searchandfilter ul > li > ul:not(.children) {
+    margin-left: 0;
+    padding-inline-start: 0!important;
+}
+
+.searchandfilter li {
+    display: block!important;
+    padding-right: 0!important;
+}
+
+.searchandfilter label {
+    display: block;
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+}
+
+.searchandfilter select{
+    border: 1px solid var(--pink-normal);
+    font: normal 90% 'Open Sans', 'Lucida Grande', sans-serif;
+    width: 100%;
+    height: 47px;
+    padding: 10px;
+    position: relative;
+    color: var(--text);
+    background: var(--back);
+}
+
+.searchandfilter select:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--back) transparent transparent transparent;
+}
+
+#posts{
+    width: 70%;
+    margin-top: 1.5em;
+}
+
+#posts #entry{
+	padding: 0.5em 2em;
+}
+
+.fic{
+	width: 85%;
+    margin: 0 auto 3em;
+    border: 1px solid var(--text-lightest);
+    padding: 1.5em 0em 0em 0em;
+    background: var(--back);
+}
+
+.meta-top{
+	display: block;
+    line-height: 200%;
+    padding: 0 1em 0em;
+}
+
+.date{
+	float: right;
+    text-transform: uppercase;
+    padding-right: 0.5em;
+    font: normal 80% 'Inconsolata', monospace;
+}
+
+.categories{
+    padding-left: 1em;
+}
+
+.categories a:link, .categories a:visited, .categories{
+    color: var(--text-lighter);
+}
+
+.categories a:link, .categories a:visited{
+    border-bottom: 1px dotted var(--text-light-2);
+}
+
+.categories a:hover, .categories a:focus{
+    background: var(--pink-normal);
+    color: var(--back);
+    border-bottom: 1px dotted var(--back);
+    box-shadow: none;
+}
+
+div.tags{
+    line-height: 120%;
+    text-align: right;
+    padding: 10px;
+    background: var(--still-not-white);
+}
+
+div.tags a:link, div.tags a:visited{
+    font-size: 90%;
+    border-bottom: none;
+    margin: 0px 4px;
+    display: inline-block;
+    color: var(--text-lighter);
+    text-transform: lowercase;
+}
+
+div.tags a:hover, div.tags a:focus{
+    color: #ec837d;
+        box-shadow: none;
+}
+
+.tags a[rel~="tag"]:before, .wp-tag-cloud li a:before {
+    content: "#";
+}
+
+dd.tags a[rel~="tag"]:before{
+    content: "";
+}
+
+.nav-links{ /**pagination**/
+	text-align: center;
+	font: normal 120% 'Open Sans', 'Lucida Grande', sans-serif;
+	padding-bottom: 1.5em;
+}
+
+.nav-links .current{
+	padding: 0.2em 0.5em;
+	display: inline-block;
+	margin: 0.5em 0;
+	color: inherit;
+}
+
+.nav-links a.page-numbers:link, .nav-links a.page-numbers:visited{
+	display: inline-block;
+	margin: 0.5em 0;
+	background: var(--pink-normal);
+	color: var(--back);
+	padding: 0.2em 0.5em;
+	border-bottom: none;
+}
+
+.nav-links a.page-numbers:hover, .nav-links a.page-numbers:focus{
+    background: var(--blue-normal);
+    box-shadow: none;
+}
+
+#uppermobile{
+    display: none;
+}
+
+#bottommobile{
+    display: none;
+}
+
+#pagebottom{
+    margin-top: -1.5em;
+    padding-bottom: 1.5em;
+}
+
+#pagebottom .nav-links{
+    padding-bottom: 0;
+}
+
+/************************ general text formatting ************************/
+
+a:link, a:visited{
+	color: var(--text);
+	border-bottom: 1px dotted var(--text);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover, a:active, a:focus{
+	box-shadow: inset 0px -8px 0 0px var(--blue-light);
+	border-bottom: 1px solid;
+}
+
+blockquote{
+	padding-left: 1.5em;
+	border-left: 3px solid var(--pink-normal);
+	margin: 2em 1.5em;
+	font: normal 105%/140% 'Playfair Display', 'Georgia', serif;
+}
+
+h1{
+    margin: 0 auto;
+    padding: 0.3em 0 0;
+}
+
+h2{
+    text-align: center;
+    font: normal 330% 'Cookie', 'Georgia', cursive;
+    box-shadow: inset 0px -25px 0 0px var(--star-yellow);
+    width: fit-content;
+    display: block;
+    margin: 0.5em auto 0;
+}
+
+h3{
+	font: normal 190% 'Playfair Display', 'Georgia', serif;
+    text-transform: capitalize;
+    text-align: center;
+    background: var(--star-yellow);
+    line-height: 10px;
+    margin: 2em 0px 1.5em;
+}
+
+h5{
+    font: normal 190% 'Playfair Display', 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    text-transform: lowercase;
+    color: var(--blue-dark);
+}
+
+big{
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+#footer input[type="submit"]:hover, #footer input[type="submit"]:focus, #page input[type="submit"]:hover, #page input[type="submit"]:focus{
+    border: 1px solid var(--pink-normal);
+    color: var(--pink-normal);
+}
+
+
+/*********** footer ************/
+
+#footerleft{
+    float: left;
+    text-align: left;
+    width: 50%;
+}
+
+#footerleft input{
+        padding: 0.5em;
+    background: transparent;
+    border: 1px solid var(--text);
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+    margin: 1em 0;
+}
+
+#footerright{
+    float: right;
+    text-align: right;
+    width: 50%;
+    bottom: 0;
+    position: relative;
+}
+
+#pagefooter #footerwrapper, #footerwrapper{
+    border-top: 30px solid var(--blue-normal);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#pagefooter #footerwrapper, #singlefooter #footerwrapper{
+    background: var(--back) url('stars.png') repeat;
+}
+
+#pagefooter #footer{
+    background: var(--back);
+	padding: 0.5em 1.5em;
+    clear: both;
+	font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+	width: 65%;
+	margin: 0 auto;
+}
+
+#singlefooter #footer{
+    background: var(--back);
+    padding: 0.5em 1em;
+    width: 85%;
+    clear: both;
+    margin: 0 auto;
+}
+
+#footer{
+    background: var(--back) url('stars.png');
+    padding: 0.5em 1.5em;
+    clear: both;
+	font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+}
+
+#footer a:link, #footer a:visited{
+	font: normal 100% 'Playfair Display', 'Georgia', serif;
+	font-weight: bold;
+}
+
+#footer a:hover, #footer a:focus, #ficpage #footer a:hover, #ficpage #footer a:focus{
+    box-shadow: none;
+    box-shadow: inset 0px -8px 0 0px var(--star-yellow);
+}
+
+#footer b{
+    color: var(--pink-normal);
+}
+
+/********* search / filter pages ********/
+
+#taxresults{
+    width: 80%;
+    margin: 1em auto 2em;
+    text-align: center;
+    font: normal 160% 'Playfair Display', 'Georgia', serif;
+    box-shadow: inset 0 -15px 0 var(--pink-light);
+}
+
+#taxresults big{
+    text-shadow: 2px 2px 0px var(--star-yellow);
+}
+
+#taxresults b, #taxresults strong{
+    border-bottom: 1px dotted;
+}
+
+#taxresults code{
+    font: normal 100% 'Inconsolata', monospace;
+}
+
+.taxnav a:hover, .taxnav a:focus{
+    box-shadow: inset 0px -10px 0 0px var(--pink-light);
+}
+
+.fandomtitle{
+    height: 50px;
+}
+
+.fandomtitle b, .fandomtitle bold, .fandomtitle strong{
+    color: var(--blue-dark);
+}
+
+.tagcloud a:link, .tagcloud a:visited{
+    color: var(--text-lighter);
+    border-bottom: 1px dotted var(--text-lighter);
+}
+
+.tagcloud a:hover, .tagcloud a:focus{
+    background:  var(--pink-light);
+    border-bottom: solid 1px var(--text-lighter);
+        box-shadow: none;
+}
+
+/********** actual pages *********/
+
+#pagewrapper{
+    margin-top: -5px;
+    background: url('stars.png') repeat; 
+}
+
+#page{
+    width: 65%;
+    margin: 0 auto;
+    background: var(--back);
+    padding: 0 1.5em 2em;
+}
+
+#page h1{
+    text-align: center;
+    font: normal 330% 'Cookie', 'Georgia', cursive;
+    box-shadow: inset 0px -25px 0 0px var(--pink-light);
+    width: fit-content;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+/*********** fic posts ***********/
+
+#ficpage{
+    background: var(--back) url('stars.png') repeat;
+}
+
+
+#ficpage #container{
+	width: 85%;
+    margin: 0em auto;
+    padding: 1.5em 1em 5em;
+    background: var(--back);
+}
+
+.ao3links{
+    float: right;
+    margin-right: 5%;
+}
+
+.ao3links a:link, .ao3links a:visited{
+    font-size: 90%;
+    text-transform: uppercase;
+    background: var(--not-grey);
+    padding: 5px 10px;
+    border-bottom: none;
+    border-radius: 30px;
+}
+
+#ficpage .ao3links a:hover, #ficpage .ao3links a:focus{
+    background: var(--blue-light)!important;
+    box-shadow: none;
+    border-bottom: none;
+}
+
+#metadata{
+	width: 80%;
+    border-top: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+    margin: 3em auto 0;
+    padding: 1.5em 1.5em 0;
+    overflow: hidden;
+}
+
+dl{
+    padding: 0;
+    margin: 0 0 1em;
+}
+
+dt{
+    float: left;
+    clear: both;
+    min-width: 10em;
+    width: 25%;
+    margin-bottom: 0.5em;
+}
+
+dd{
+    float: left;
+    width: 69%;
+    margin-bottom: 0.5em;
+}
+
+dl dd dl{
+    padding: 0;
+    margin-top: 0;
+}
+
+dt.inside, dd.inside{
+    float: none;
+    display: inline;
+}
+
+dd.inside{
+    margin: 0 3em 0 0;
+}
+
+.synopsis{
+    padding: 2em 0 1em;
+    clear: both;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.synopsis blockquote{
+    margin: 0 1em;
+    padding-left: 0;
+	border-left: none;
+	font: inherit;
+}
+
+#ficpage .synopsis h1{
+    margin: 0 auto;
+    padding: 0.3em 0 0;
+    text-align: center;
+    font: normal 240% 'Playfair Display', 'Georgia', serif;
+}
+
+#ficpage .synopsis h2{
+    text-align: center;
+    font: normal 140% 'Playfair Display', 'Georgia', serif;
+    width: fit-content;
+    display: block;
+    margin: 0.5em auto 1.5em;
+    font-weight: normal;
+    box-shadow: none;
+}
+
+#ficpage #container .synopsis h2 a:hover, #ficpage #container .synopsis h2 a:focus, #ficpage #container .synopsis h2 a:active{
+    box-shadow: inset 0px -15px 0 0px var(--star-yellow)!important;
+    background: none;
+}
+
+#ficpage .synopsis h2 a:link, #ficpage .synopsis h2 a:visited{
+    color: var(--text-lighter);
+    border-bottom: none;
+}
+
+#ficpage .synopsis h3{
+    font: normal 130% 'Playfair Display', 'Georgia', serif;
+    border-bottom: 1px solid;
+    margin: 0;
+    text-transform: capitalize;
+    text-align: left;
+    background: none;
+    margin: 0;
+}
+
+#ficpage #entry{
+    margin: 3em auto;
+    width: 85%;
+}
+
+#ficpage a:hover, #ficpage a:focus{
+	box-shadow: inset 0px -8px 0 0px var(--pink-light);
+	border-bottom: 1px solid;
+}
+
+#ficpage #entry h4{
+    text-align: center;
+    font: normal 200% 'Inconsolata', monospace;
+    margin: 0 auto 3em;
+    padding: 0;
+}
+
+button a:link, button a:visited{
+    border-bottom: none;
+}
+
+button a:hover, button a:focus{
+    box-shadow: none!important;
+    border-bottom: none!important;
+}
+
+#ficpage a button:focus, #ficpage a button:hover, #ficpage a button:active, #type input#submit:hover, #type input#submit:focus{
+    background: var(--text)!important;
+    color: var(--back)!important;
+    border: 1px dotted var(--back)!important;
+}
+
+#ficbuttonnav{
+    float: right;
+    margin-bottom: 3em;
+}
+
+#ficbuttonnav a{
+    display: inline-block;
+    margin: 0 0.3em;
+    border-bottom: none;
+}
+
+#ficpage #ficbuttonnav a:hover, #ficpage #ficbuttonnav a:focus{
+    box-shadow: none;
+    border-bottom: none;
+    background: none;
+}
+
+/***** misc page specific text formatting for other things ******/
+
+.meta-top h2{
+    font: normal 160% 'Open Sans', 'Lucida Grande', sans-serif;
+    text-align: left;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: none;
+    margin: 0;
+}
+
+#posts .fic .meta-top h2 a:link, #posts .fic .meta-top h2 a:visited{
+    color: var(--blue-dark);
+    border-bottom: var(--blue-dark) solid 1px;
+}
+
+#posts .fic .meta-top h2 a:hover, #posts .fic .meta-top h2 a:focus{
+    color: var(--pink-normal);
+    border-bottom: solid 1px var(--pink-normal);
+        box-shadow: none;
+}
+
+h2 .theauthor{
+    font: normal 80% 'Playfair Display', 'Georgia', serif;
+    color: var(--text);
+}
+
+blockquote.userstufflol blockquote{
+    padding: 0 0 0 1.5em;
+    margin: 2em 0 2em 2em;
+    border-left: 5px solid;
+}
+
+#page hr{
+    margin: 3em auto;
+    border-bottom: 1px solid var(--pink-kinda-dark);
+    border-top: none;
+    width: 50%;
+}
+
+#ficpage hr{
+	margin: 4em;
+	border-bottom: 1px solid var(--text-lighter);
+	border-top: none;
+}
+
+#page h4{
+	font: italic 180% 'Playfair Display', 'Georgia', serif;
+    margin: 1em 0;
+    text-align: left;
+    border-left: 30px solid var(--blue-normal);
+    padding-left: 1em;
+    text-transform: lowercase;
+}
+
+/** comments lol **/
+
+#commentwrapper button{
+    background: var(--back);
+    appearance: none;
+    border: 1px solid var(--text);
+    padding: 0.5em;
+    border-radius: 5px;
+    color: var(--text);
+    font: normal 105% 'Playfair Display', 'Georgia', serif;
+}
+
+#comments{
+    clear: both;
+}
+
+#commentwrapper{
+    width: 85%;
+    margin: 0 auto;
+}
+
+#respond{
+    clear: both;
+    border: 1px solid var(--text);
+    background: var(--not-not-white);
+    padding: 1.5em 3em;
+    font: normal 100% 'Playfair Display', 'Georgia', serif;
+}
+
+#respond #type dt{
+    margin-bottom: 0.5em;
+    box-shadow: inset 0 -5px 0 var(--back);
+    font-size: 110%;
+}
+
+#respond #type dd{
+    margin-bottom: 1em;
+}
+
+#respond #type dd input{
+    width: 100%;
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+    border: 1px solid var(--text);
+    background: var(--back);
+    color: var(--text);
+}
+
+#respond textarea{
+    width: 98%;
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+    border: 1px solid var(--text);
+    color: var(--text);
+    background: var(--back);
+}
+
+.commentcodeinfo{
+    float: right;
+    padding-bottom: 1em;
+}
+
+#respond input#submit{
+    background: var(--back);
+    appearance: none;
+    border: 1px solid var(--text);
+    padding: 0.5em;
+    font: normal 100% 'Playfair Display', 'Georgia', serif;
+    border-radius: 5px;
+    color: var(--text);
+}
+
+#comments .icon{
+    float: left;
+    border-bottom: 5px solid var(--not-grey);
+    height: 100px;
+    width: 100px;
+    margin-right: 0.5em;
+}
+
+#comments h4.commentmetadata{
+    margin: 0;
+    background: var(--not-grey);
+    padding: 0.3em;
+    font: normal 120%/100% 'Playfair Display', 'Georgia', serif;
+}
+
+#comments h4.commentmetadata .author{
+    vertical-align: text-top;
+}
+
+#comments h4.commentmetadata .commentdate{
+    float: right;
+    font: normal 90% 'Inconsolata', monospace;
+    text-transform: uppercase;
+}
+
+.comment-list li.comment::marker{
+    display: none;
+}
+
+.comment-body{
+    min-height: 10em;
+    border: 1px solid var(--text);
+    margin: 1em 0;
+    position: relative;
+}
+
+.comment-author img{
+    float: left;
+    border-bottom: 10px solid var(--not-grey);
+    height: 100px;
+    width: 100px;
+    margin-right: 0.5em;
+}
+
+.commenttext{
+    padding: 0 1em 1em;
+}
+
+.commentbottommeta{
+    float: right;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    margin: 1em;
+}
+
+/**misc conditional handling**/
+
+.wp-caption{
+    margin: 3em auto;
+}
+
+.wp-caption-text{
+    text-align: center;
+    margin-bottom: 3em;
+    color: var(--text-light-2);
+    font: italic 90% 'Open Sans', 'Lucida Grande', sans-serif;
+}
+
+form#search-form-alt{
+    text-align: center;
+    margin: 3em 0;
+}
+
+input#s{
+    background: var(--back) url(stars.png) repeat;
+    padding: 1em;
+    border: 1px solid var(--text);
+    width: 30%;
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+    color: var(--text);
+}
+
+input#searchsubmit{
+    padding: 1em;
+    border: 1px solid var(--text);
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+    background: var(--back) url(stars.png);
+    color: var(--text);
+}
+
+#respond input#searchsubmit:hover, #respond input#searchsubmit:focus{
+    color: var(--pink-normal);
+    border: 1px solid var(--pink-normal);
+}
+
+/* plugin and funky css */
+
+.noptin-newsletter-form .noptin-form-field-wrapper {
+    text-align: center;
+    margin-bottom: 1em!important; 
+}
+
+.noptin-styles-basic .noptin-label {
+    text-align: center;
+    box-shadow: inset 0px -11px 0 0px var(--star-yellow);
+    font: normal 1.2em 'Playfair Display', 'Georgia', serif;
+}
+
+.noptin-newsletter-form .noptin-birthday-div, .noptin-newsletter-form .noptin-text, .noptin-styles-basic .noptin-text {
+    border: 1px solid var(--text);
+    background: var(--back)!important;
+    padding: 8px;
+    font: normal 100% 'Open Sans';
+    color: var(--text);
+}
+
+.noptin-styles-basic .button {
+    background: var(--back);
+    border: 1px solid var(--text);
+    font: normal 100% 'Open Sans', sans-serif;
+    color: var(--text);
+    padding: 0.5em;
+}
+
+.noptin-styles-basic .button:hover, .noptin-styles-basic .button:focus{
+    border: 1px solid var(--pink-normal);
+    color: var(--pink-normal);
+}
+
+.agl_buttons_wrp a:link, .agl_buttons_wrp a:visited, .agl_buttons_wrp a:hover, .agl_buttons_wrp a:active{
+    border-bottom: none;
+}
+
+#agl_no_button{
+    display: none;
+}
+
+#agl_yes_button.agl_buttons:hover, #agl_yes_button.agl_buttons:focus{
+    background: var(--blue-light);
+    box-shadow: none;
+}
+
+.wipnote{
+    font: italic 170% 'Playfair Display', serif;
+    box-shadow: inset 0 -15px var(--blue-light);
+    margin: 2em 1.5em;
+}
+
+/* ipadpro */
+
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+    
+html {
+-webkit-text-size-adjust: 100%;
+}
+	
+	#ficpage #metadata {
+    width: 90%;
+	}
+	
+	#ficpage .ao3links{
+	    margin-right: 0;
+	}
+	
+	#ficpage .synopsis{
+	    width: 90%;
+	}
+	
+	#ficpage #entry{
+    width: 95%;
+}
+
+#pagefooter #footer, #page{
+    width: 80%;
+}
+
+.meta-top h2{
+    max-width: 75%;
+}
+
+}
+
+/* ipad */
+
+@media only screen and (max-width: 768px) and (min-width: 431px) {
+    
+    html {
+-webkit-text-size-adjust: 100%;
+}
+	
+	#banner{
+    margin-top: 50px;
+}
+
+#filter{
+    width: 200px;
+    right: 0;
+    position: fixed;
+    min-height: 100vh;
+    background: var(--back);
+    top: 0;
+    z-index: 999;
+    display: none;
+    border-left: 10px solid var(--pink-normal);
+}
+
+#filter form.searchandfilter{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#filter .searchandfilter ul{
+    padding-inline-start: 0!important;
+}
+
+.close{
+    text-align: right;
+    padding-top: 10px;
+}
+
+.close a{
+    border-bottom: none;
+    color: var(--blue-normal);
+    font-size: 200%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close a:hover, .close a:focus{
+    color: var(--pink-normal);
+    border-bottom: none;
+    box-shadow: none;
+}
+
+#navigation{
+    display: none;
+}
+
+.borgerbutton button{
+    color: var(--pink-normal);
+    border: none;
+    background: none;
+    font-size: 2.2em;
+    padding: 5px 10px 0 0;
+    cursor: pointer;
+}
+
+.borgerbutton{
+    display: block;
+    float: right;
+}
+
+#borger{
+       display: none;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    position: fixed;
+    background: var(--back);
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 5px solid var(--orange);
+}
+
+#borger .menu{
+    margin: 0;
+}
+
+#borger .close{
+    padding: 0;
+}
+
+#borger .menu li{
+    text-align: left;
+    padding-left: 1em;
+}
+
+#borger .menu li a:link, #borger .menu li a:visited{
+    text-transform: lowercase;
+    border-bottom: none;
+    font: normal 210% 'Cookie', 'Georgia', cursive;
+    color: var(--pink-normal);
+    text-align: left;
+    display: block;
+}
+
+#borger .menu li a:focus, #borger .menu li a:hover, #borger .menu li a:active{
+    color: var(--blue-dark);
+    box-shadow: inset 0px -20px 0 0px var(--star-yellow);
+}
+
+#indexbanner, #pagebanner{
+    background: url(banner.png) center no-repeat;
+    background-size: 24em;
+    height: 10em;
+}
+
+#searchfilter{
+    display: none;
+}
+
+#posts{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#upper{
+    display: none;
+}
+
+#bottom{
+    display: none;
+}
+
+#uppermobile{
+    display: block;
+}
+
+#bottommobile{
+    display: block;
+}
+	
+.nav-links{
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+}
+
+.fic{
+ width: 95%;
+}
+
+#pagewrapper{
+    background: var(--back);
+    width: 100%;
+}
+
+#page{
+    width: 90%;
+}
+
+#page, .fic #entry{
+    font-size: 95%;
+    line-height: 150%;
+}
+
+#fandoms{
+    font-size: 95%;
+}
+
+#fandoms .inner {
+    padding: 1em 0;
+    width: 80%;
+}
+
+#fandoms ul{
+    padding: 0 1em 1em;
+}
+
+ul.major li {
+    display: block;
+    width: auto;
+}
+
+ul.minor li {
+    display: block;
+    width: auto;
+}
+
+#page img.alignright{
+    width: 50%;
+}
+
+.meta-top{
+    padding: 0 5%;
+}
+
+.meta-top h2{
+    max-width: 75%;
+}
+
+.meta-top .date{
+    padding-right: 0;
+}
+
+.categories{
+    font-size: 85%;
+    padding: 0 5%;
+}
+
+#posts #entry {
+    padding: 0.5em 5%;
+}
+
+#ficpage{
+    font-size: 90%;
+    background: var(--back);
+}
+
+#ficpage #entry{
+    width: 100%;
+}
+
+#ficpage #borger{
+    position: absolute;
+}
+
+#ficpage #container{
+       margin: 1em auto;
+    padding: 0;
+    width: 95%;
+}
+
+#ficpage .ao3links{
+    float: none;
+	    margin-right: 0;
+}
+
+#ficpage #metadata{
+    margin: 1em 0;
+        width: auto;
+}
+
+#singlefooter #footerwrapper{
+margin-top: 3em;
+}
+
+#footer{
+    font-size: 80%;
+}
+
+#pagefooter #footer, #singlefooter #footer{
+    background: var(--back) url('stars.png') repeat;
+    font-size: 80%;
+    width: auto;
+}
+
+dd{
+    margin-left: 1em;
+}
+
+dd.inside {
+    margin: 0;
+}
+dd.tags{
+    width: 100%;
+}
+
+dt.words{
+    margin-left: 1em;
+}
+
+#taxresults{
+    box-shadow: none;
+    margin: 1em auto;
+}
+
+#footer{
+    font-size: 80%;
+}
+
+dt.invisi{
+    display: none;
+}
+
+#respond{
+   padding: 2% 5%;
+}
+
+#respond #type dd {
+    width: 100%;
+    margin-left: 0;
+}
+
+#respond #type dd input {
+    width: 98%;
+}
+
+#commentwrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#ficpage .synopsis{
+	    width: 90%;
+	}
+	
+#ficpage #entry{
+    width: 95%;
+}
+
+}
+
+/* mobile */
+
+@media only screen and (max-width: 430px) and (min-width: 0px) {
+
+html {
+-webkit-text-size-adjust: 100%;
+}
+
+#banner{
+    margin-top: 50px;
+}
+
+#filter{
+    width: 200px;
+    right: 0;
+    position: fixed;
+    min-height: 100vh;
+    background: var(--back);
+    top: 0;
+    z-index: 999;
+    display: none;
+    border-left: 10px solid var(--pink-normal);
+}
+
+#filter form.searchandfilter{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#filter .searchandfilter ul{
+    padding-inline-start: 0!important;
+}
+
+.close{
+    text-align: right;
+    padding-top: 10px;
+}
+
+.close a{
+    border-bottom: none;
+    color: var(--blue-normal);
+    font-size: 200%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close a:hover, .close a:focus{
+    color: var(--pink-normal);
+    border-bottom: none;
+    box-shadow: none;
+}
+
+#navigation{
+    display: none;
+}
+
+.borgerbutton button{
+    color: var(--pink-normal);
+    border: none;
+    background: none;
+    font-size: 2.2em;
+    padding: 5px 10px 0 0;
+    cursor: pointer;
+}
+
+.borgerbutton{
+    display: block;
+    float:right;
+}
+
+#borger{
+       display: none;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    position: fixed;
+    background: var(--back);
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 5px solid var(--orange);
+}
+
+#borger .menu{
+    margin: 0;
+}
+
+#borger .close{
+    padding: 0;
+}
+
+#borger .menu li{
+    text-align: left;
+    padding-left: 1em;
+}
+
+#borger .menu li a:link, #borger .menu li a:visited{
+    text-transform: lowercase;
+    border-bottom: none;
+    font: normal 210% 'Cookie', 'Georgia', cursive;
+    color: var(--pink-normal);
+    text-align: left;
+    display: block;
+}
+
+#borger .menu li a:focus, #borger .menu li a:hover, #borger .menu li a:active{
+    color: var(--blue-dark);
+    box-shadow: inset 0px -20px 0 0px var(--star-yellow);
+}
+
+#indexbanner, #pagebanner{
+    background: url(banner.png) center no-repeat;
+    background-size: 24em;
+    height: 10em;
+}
+
+#searchfilter{
+    display: none;
+}
+
+#posts{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#upper{
+    display: none;
+}
+
+#bottom{
+    display: none;
+}
+
+#uppermobile{
+    display: block;
+}
+
+#bottommobile{
+    display: block;
+}
+	
+.nav-links{
+    font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+}
+
+.fic{
+ width: 95%;
+}
+
+#pagewrapper{
+    background: var(--back);
+    width: 100%;
+}
+
+#page{
+    width: 90%;
+}
+
+#page, .fic #entry{
+    font-size: 95%;
+    line-height: 150%;
+}
+
+#fandoms{
+    font-size: 95%;
+}
+
+#fandoms .inner {
+    padding: 1em 0;
+    width: 80%;
+}
+
+#fandoms ul{
+    padding: 0 1em 1em;
+}
+
+ul.major li {
+    display: block;
+    width: auto;
+}
+
+ul.minor li {
+    display: block;
+    width: auto;
+}
+
+#page img.alignright{
+    width: 50%;
+}
+
+.meta-top{
+    padding: 0 5%;
+}
+
+.meta-top h2{
+    max-width: 75%;
+}
+
+.meta-top .date{
+    padding-right: 0;
+}
+
+.categories{
+    font-size: 85%;
+    padding: 0 5%;
+}
+
+#posts #entry {
+    padding: 0.5em 5%;
+}
+
+#ficpage{
+    background: var(--back);
+}
+
+#ficpage #entry{
+    width: 100%;
+}
+
+#ficpage #borger{
+    position: absolute;
+}
+
+#ficpage #container{
+       margin: 1em auto;
+    padding: 0;
+    width: 90%;
+    font-size: 95%;
+    line-height: 150%;
+}
+
+#ficpage .ao3links{
+    float: none;
+}
+
+#ficpage #metadata{
+    margin: 1em 0;
+        width: auto;
+}
+
+#pagefooter #footer, #singlefooter #footer{
+    background: var(--back) url('stars.png') repeat;
+    width: auto;
+    font-size: 80%;
+}
+
+dd{
+    margin-left: 1em;
+    width: 100%;
+}
+
+dd.inside { /**date and word count**/
+    margin: 0;
+}
+
+dd.tags{
+    width: 100%;
+}
+
+dt.words::before{
+    content: ' | ';
+}
+
+#taxresults{
+    box-shadow: none;
+    margin: 1em auto;
+}
+
+input#s{
+    width: 70%;
+}
+
+dt.invisi{
+    display: none;
+}
+
+#respond{
+   padding: 0 5%;
+}
+
+#respond #type dd {
+    width: 100%;
+    margin-left: 0;
+}
+
+#respond #type dd input {
+    width: 98%;
+}
+
+#commentwrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#ficpage .synopsis{
+	    width: 90%;
+	}
+
+#singlefooter #footerwrapper{
+margin-top: 3em;
+}
+
+#footer{
+    font-size: 80%;
+}
+
+.theme-switch-wrapper {
+    margin: 9px 0 9px 10px;
+
+}
+
+#comments h4.commentmetadata .commentdate{
+    font-size: 55%;
+    margin-top: 0.5em;
+}
+
+#comments .comment .comment-body{
+     padding: 0.5em 0.5em 2em;
+}
+
+}
+ 
