@@ -22,3 +22,6 @@ The theme's star decoration mostly comes out of convenience and simplicity; I do
 - Night mode, which is toggleable on every page.
 - Collapsible menu and filter sidebar on mobile.
 - Plugins can be found on the <a href="https://aroceu.com/fic/credits/">credits page</a>.
+
+## preview
+![Screenshot of aroceu's fic site, with a banner labeled as such, as well as navigation for fandoms, filterable navigation on the side, a simple list of recent works, and other pages on the site](screenshot.png)
