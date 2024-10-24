@@ -15,7 +15,7 @@ document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
     
     <div id="singletop">
 
-	<div id="icon"><a href="/fic"><img src="https://aroceu.com/fic/wp-content/themes/main/site icon.png"> <?php bloginfo('name'); ?></a></div>
+	<div id="icon"><a href="/fic"><img src="https://aroceu.com/fic/wp-content/themes/stars/site icon.png"> <?php bloginfo('name'); ?></a></div>
 	
 	<div class="theme-switch-wrapper">
        <label class="theme-switch" for="checkbox">

@@ -251,7 +251,7 @@ function fic_comment($comment, $args, $depth) {
 add_filter( 'avatar_defaults', 'custom_gravatar' );
     function custom_gravatar ($avatar_defaults) {
     
-    $myavatar = 'https://aroceu.com/fic/wp-content/themes/main/gravatar.png'; //replace this with your the image URL
+    $myavatar = 'https://aroceu.com/fic/wp-content/themes/stars/gravatar.png'; //replace this with your the image URL
     
     $avatar_defaults[$myavatar] = "Default Gravatar";
     

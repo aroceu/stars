@@ -2,7 +2,7 @@
 
 <div id="top">
 
-	<div id="icon"><a href="/fic"><img src="https://aroceu.com/fic/wp-content/themes/main/site icon.png" alt="aroceu's default icon, chibi of Pran from Bad Buddy with Kirby"> <?php bloginfo('name'); ?></a></div>
+	<div id="icon"><a href="/fic"><img src="https://aroceu.com/fic/wp-content/themes/stars/site icon.png" alt="aroceu's default icon, chibi of Pran from Bad Buddy with Kirby"> <?php bloginfo('name'); ?></a></div>
 	
 	<div class="theme-switch-wrapper">
        <label class="theme-switch" for="checkbox">

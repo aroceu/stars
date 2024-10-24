@@ -3,7 +3,7 @@
 <style type="text/css">
 
 #fandombanner{
-	background: url('https://aroceu.com/fic/wp-content/themes/main/banners/bbs banner.png') center no-repeat;
+	background: url('https://aroceu.com/fic/wp-content/themes/stars/banners/bbs banner.png') center no-repeat;
 	background-size: 50em;
 	height: 20em;
 	margin-top: 55px;
@@ -11,7 +11,7 @@
 
 
 #fandomtempbanner{
-	background: url('https://aroceu.com/fic/wp-content/themes/main/stars.png') repeat;
+	background: url('https://aroceu.com/fic/wp-content/themes/stars/stars.png') repeat;
 		border-bottom: 5px solid #ffcba7;
 }
 

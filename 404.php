@@ -11,7 +11,7 @@
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 
-      <link rel="shortcut icon" type="image/x-icon" href="https://aroceu.com/fic/wp-content/themes/main/favicon.png" />
+      <link rel="shortcut icon" type="image/x-icon" href="https://aroceu.com/fic/wp-content/themes/stars/favicon.png" />
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -27,7 +27,7 @@
 	}
 
 	body{
-		background: #fff url('https://aroceu.com/fic/wp-content/themes/main/stars.png');
+		background: #fff url('https://aroceu.com/fic/wp-content/themes/stars/stars.png');
 		margin: 0;
     	padding: 0;
           color: #5a4a57;
