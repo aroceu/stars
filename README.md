@@ -1,6 +1,7 @@
-# stars
+# stars (v1.0)
+**Launch Date:** May 2023
 
-The first of probably not many themes for my fic website, due to how ginormous these themes tend to be. Please respect me and don't take too much without crediting me&mdash;this is the most work I've ever put into a website.
+The first of probably not many themes for [my fic website](https://aroceu.com/fic/), due to how ginormous these themes tend to be. Please respect me and don't take too much without crediting me&mdash;this is the most work I've ever put into a website.
 
 The goal of this theme was to feature a color scheme and not overly complicated format in displaying my fics, while allowing the management to be easy for me in the future. I'd been wanting to make a website for my fic for a while, but was daunted with how many fics I knew I'd have to move, as well as the more technical aspects of hosting files &mdash; or databases &mdash; of fic. WordPress was the solution to this management-wise, but thematically I wanted to be able to be flexible with having additional pages, such as an "about" (because I love documentation and talking about myself) and a related works section to showcase the fanart and other recursive works I've received as well :)
 
