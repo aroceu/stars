@@ -5,7 +5,7 @@
 
 <div id="footerleft">
 
-               <h5>Search</h5>
+                    <h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
                
                <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">other filtering options</a></p>
 
@@ -14,7 +14,6 @@
 
 <div id="footerright">
 
-		<h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
 		<p>There are <b><?php echo do_shortcode('[sbs_posts]'); ?>
 </b> fics here, with a total of <b><?php echo do_shortcode('[sbs_word_count_all]'); ?></b> words. 
 </p>
