@@ -50,9 +50,9 @@ document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
     <div class="ao3links">
         <?php
         
-        if(get_field('twitter_link'))
+         if(get_field('bsky_link'))
             {
-                echo '<a href="'. get_field('twitter_link') .'"><i class="fa-brands fa-twitter"></i></a> ';
+                echo '<a href="'. get_field('bsky_link') .'"><i class="fa-brands fa-bluesky"></i></a> ';
             }
             
             if(get_field('ao3_link'))
