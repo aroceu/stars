@@ -4,23 +4,22 @@
 
 
 <div id="footerleft">
-
-                    <h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
-               
-               <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">other filtering options</a>
-                <br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a> // <a href="/">contact</a></p>
+                <h5>search</h5>
+               <?php get_search_form( ); ?>
+               <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">advanced filter & search</a></p>
 
                
 </div>
 
 <div id="footerright">
-
+                    <h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
 		<p>There are <b><?php echo do_shortcode('[sbs_posts]'); ?>
 </b> fics here, with a total of <b><?php echo do_shortcode('[sbs_word_count_all]'); ?></b> words. 
 </p>
 <p>The most recent fic was posted on <b><?php echo do_shortcode('[sbs_updated]'); ?></b>.</p>
 <p> <a href="https://kingdra.net"><img src="https://kingdra.net/kingdra.png" height="15px"></a> // <a href="https://aroceu.com/fic/rss" target="_blank">feed</a> // 
-	<a href="#">to top</a></p>
+	<a href="#">to top</a>
+<br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a> // <a href="/">contact</a></p>
 
 	</div>
 
