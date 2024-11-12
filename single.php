@@ -52,7 +52,7 @@ document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
         
         if(get_field('bsky_link'))
             {
-                echo '<a href="'. get_field('bsky_link') .'"><i class="fa-brands fa-bsky"></i></a> ';
+                echo '<a href="'. get_field('bsky_link') .'"><i class="fa-brands fa-bluesky"></i></a> ';
             }
             
             if(get_field('ao3_link'))
