@@ -6,7 +6,8 @@
 <div id="footerleft">
                 <h5>search</h5>
                <?php get_search_form( ); ?>
-               <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">advanced filter & search</a></p>
+               <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">advanced filter & search</a>
+               <br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a> // <a href="/">contact</a> // <a href="https://kingdra.net"><img src="https://kingdra.net/kingdra.png" height="15px"></a></p>
 
                
 </div>
@@ -17,9 +18,8 @@
 </b> fics here, with a total of <b><?php echo do_shortcode('[sbs_word_count_all]'); ?></b> words. 
 </p>
 <p>The most recent fic was posted on <b><?php echo do_shortcode('[sbs_updated]'); ?></b>.</p>
-<p> <a href="https://kingdra.net"><img src="https://kingdra.net/kingdra.png" height="15px"></a> // <a href="https://aroceu.com/fic/rss" target="_blank">feed</a> // 
-	<a href="#">to top</a>
-<br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a> // <a href="/">contact</a></p>
+<p>  <a href="https://aroceu.com/fic/rss" target="_blank">feed</a> // 
+	<a href="#">to top</a></p>
 
 	</div>
 
