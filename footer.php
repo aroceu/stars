@@ -7,7 +7,7 @@
 
                <h5>Search</h5>
 
-               <?php get_search_form( ); ?>
+               [search_box]
                
                <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">other filtering options</a></p>
 
