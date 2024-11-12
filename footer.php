@@ -6,12 +6,6 @@
 <div id="footerleft">
 
                <h5>Search</h5>
-
-               <form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" / >
-    <label class="hidden" for="s" ></label>
-    <input type="text" value="" placeholder="type here, and..." name="s" id="s" class="textInput"/>
-    <input type="submit" id="searchsubmit" value="search" class="textInput"/>
-    </form>
                
                <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">other filtering options</a></p>
 
