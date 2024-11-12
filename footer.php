@@ -8,7 +8,7 @@
                     <h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
                
                <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">other filtering options</a></p>
-               <p><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="/">contact</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a> // <a href="https://kingdra.net"><img src="https://kingdra.net/kingdra.png"></a></p>
+                <br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="/">contact</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a></p>
 
                
 </div>
@@ -19,7 +19,7 @@
 </b> fics here, with a total of <b><?php echo do_shortcode('[sbs_word_count_all]'); ?></b> words. 
 </p>
 <p>The most recent fic was posted on <b><?php echo do_shortcode('[sbs_updated]'); ?></b>.</p>
-<p> <a href="https://aroceu.com/fic/rss" target="_blank">feed</a> // 
+<p> <a href="https://kingdra.net"><img src="https://kingdra.net/kingdra.png" height="15px"></a> // <a href="https://aroceu.com/fic/rss" target="_blank">feed</a> // 
 	<a href="#">to top</a></p>
 
 	</div>
