@@ -671,7 +671,7 @@ big{
     background: var(--back) url('stars.png');
     padding: 0.5em 1.5em;
     clear: both;
-	font: normal 100% 'Open Sans', 'Lucida Grande', sans-serif;
+	font: normal 95% 'Open Sans', 'Lucida Grande', sans-serif;
 }
 
 #footer a:link, #footer a:visited{

@@ -8,7 +8,7 @@
                     <h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
                
                <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">other filtering options</a>
-                <br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="/">contact</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a></p>
+                <br /><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="https://aroceu.com/library">library</a> // <a href="https://aroceu.com/generators">generators</a> // <a href="/">contact</a></p>
 
                
 </div>
