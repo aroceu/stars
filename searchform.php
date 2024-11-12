@@ -1,5 +1,5 @@
-<form method="get" id="search-form-alt" action="'. esc_url(home_url('/')) .'">
+<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" / >
 	<label class="hidden" for="s" ></label>
-		<input type="text" name="s" id="s" placeholder="Type here and..">
-		<input type="submit" id="searchsubmit" value="search!" class="textInput"/>
+	<input type="text" value="" placeholder="type here, and..." name="s" id="s" class="textInput"/>
+	<input type="submit" id="searchsubmit" value="search" class="textInput"/>
 	</form>
