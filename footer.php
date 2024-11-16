@@ -17,7 +17,7 @@
 </b> fics here, with a total of <b><?php echo do_shortcode('[sbs_word_count_all]'); ?></b> words. 
 </p>
 <p>The most recent fic was posted on <b><?php echo do_shortcode('[sbs_updated]'); ?></b>.</p>
-<p><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="/">contact</a> // <a href="#">to top</a></p>
+<p><a href="https://aroceu.com/fic/credits">credits, etc.</a> // <a href="https://aroceu.com/fic/documentation/">documentation</a> // <a href="/">contact</a> // <a href="#">to top</a></p>
 
 	</div>
 
