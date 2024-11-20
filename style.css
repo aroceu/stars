@@ -558,6 +558,7 @@ dd.tags a[rel~="tag"]:before{
 
 a:link, a:visited{
 	color: var(--text);
+    box-shadow: inset 0px -8px 0 0px var(--pink-light);
 	border-bottom: 1px dotted var(--text);
 	text-decoration: none;
 	cursor: pointer;
