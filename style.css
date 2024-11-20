@@ -799,6 +799,10 @@ big{
     overflow: hidden;
 }
 
+#metadata a:link, #metadata a:visited{
+    color: var(--text);
+}
+
 dl{
     padding: 0;
     margin: 0 0 1em;
