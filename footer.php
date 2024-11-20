@@ -6,7 +6,7 @@
 <div id="footerleft">
                 <h5>search</h5>
                <?php get_search_form( ); ?>
-               <p><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">advanced filtering options</a></p>
+               <p style="margin-top: 4px;"><a href="https://aroceu.com/fic/tag">tags</a> // <a href="https://aroceu.com/fic/c">categories</a> // <a href="https://aroceu.com/fic/filter">advanced filtering options</a></p>
 
                
 </div>
