@@ -185,7 +185,7 @@ document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
 
                         if(get_field('bottom_notes'))
                         {
-                            echo '<p style="margin-top:1.5em">(See the end of the work for <a href="#bottomnotes">more notes</a>)</p>'; } ?>
+                            echo '<p class="topnotes">(See the end of the work for <a href="#bottomnotes">more notes</a>)</p>'; } ?>
                         
 		               	</div>
 

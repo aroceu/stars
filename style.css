@@ -782,6 +782,7 @@ big{
     padding: 5px 10px;
     border-bottom: none;
     border-radius: 30px;
+    color: var(--text);
 }
 
 #ficpage .ao3links a:hover, #ficpage .ao3links a:focus{
@@ -803,6 +804,15 @@ big{
     color: var(--text);
     border-color: var(--text);
 }
+
+.topnotes{
+    margin-top:1.5em;
+}
+
+.related a:link, .related a:visited, .topnotes a:link, .topnotes a:visited{
+     color: var(--text);
+}
+
 
 dl{
     padding: 0;
