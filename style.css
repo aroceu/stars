@@ -557,9 +557,8 @@ dd.tags a[rel~="tag"]:before{
 /************************ general text formatting ************************/
 
 a:link, a:visited{
-	color: var(--text);
-    box-shadow: inset 0px -8px 0 0px var(--pink-light);
-	border-bottom: 1px dotted var(--text);
+	color: var(--pink-kinda-dark);
+	border-bottom: 1px dotted var(--pink-kinda-dark);
 	text-decoration: none;
 	cursor: pointer;
 }
