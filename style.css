@@ -557,14 +557,14 @@ dd.tags a[rel~="tag"]:before{
 /************************ general text formatting ************************/
 
 a:link, a:visited{
-	color: var(--pink-kinda-dark);
-	border-bottom: 1px dotted var(--pink-kinda-dark);
+	color: var(--blue-light);
+	border-bottom: 1px dotted var(--blue-light);
 	text-decoration: none;
 	cursor: pointer;
 }
 
 a:hover, a:active, a:focus{
-	box-shadow: inset 0px -8px 0 0px var(--blue-light);
+	box-shadow: inset 0px -8px 0 0px var(--pink-light);
 	border-bottom: 1px solid;
 }
 
