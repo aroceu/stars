@@ -801,6 +801,7 @@ big{
 
 #metadata a:link, #metadata a:visited{
     color: var(--text);
+    border-color: var(--text);
 }
 
 dl{
