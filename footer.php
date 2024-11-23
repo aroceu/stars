@@ -11,6 +11,15 @@
                
 </div>
 
+<div id="webring">
+    <SCRIPT LANGUAGE="JavaScript"><!--
+if (navigator.appVersion.indexOf('MSIE 3') == -1)
+    document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="https://ficring.neocities.org/ring.js"><\/SCRIPT>');
+else
+    document.write('<CENTER><IFRAME FRAMEBORDER=0 WIDTH="100" HEIGHT="50" MARGINHEIGHT=0 MARGINWIDTH=0 SCROLLING=no SRC="https://ficring.neocities.org/ring.html"><\/IFRAME><\/CENTER>');
+//--></SCRIPT> 
+</div>
+
 <div id="footerright">
                     <h5>&copy; 2009-<?php echo date("Y"); ?> aroceu</h5>
 		<p>There are <b><?php echo do_shortcode('[sbs_posts]'); ?>

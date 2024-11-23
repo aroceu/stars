@@ -635,9 +635,18 @@ big{
 #footerright{
     float: right;
     text-align: right;
-    width: 50%;
+    width: 30%;
     bottom: 0;
     position: relative;
+}
+
+#webring{
+    width: 20%;
+    float: right;
+}
+
+#pagefooter #footerwrapper #webring, #singlefooter #footerwrapper #webring{
+    display: none;
 }
 
 #pagefooter #footerwrapper, #footerwrapper{
