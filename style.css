@@ -645,13 +645,9 @@ big{
     float: left;
 }
 
-#webring img{
-    height: 60px;
-  width: 80px;
-}
-
 #webring a{
     border-bottom: none;
+    box-shadow: none;
 }
 
 #pagefooter #footerwrapper #webring, #singlefooter #footerwrapper #webring{
