@@ -641,8 +641,8 @@ big{
 }
 
 #webring{
-    width: 23%;
-    float: right;
+    width: 33%;
+    float: left;
 }
 
 #pagefooter #footerwrapper #webring, #singlefooter #footerwrapper #webring{
