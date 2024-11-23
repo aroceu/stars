@@ -650,6 +650,7 @@ big{
     padding-top: 1em;
     width: 34%;
     float: left;
+    text-align: center;
 }
 
 #webring a:link, #webring a:visited, #webring a:hover, #webring a:focus{
