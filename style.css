@@ -556,6 +556,10 @@ dd.tags a[rel~="tag"]:before{
 
 /************************ general text formatting ************************/
 
+::selection {
+    background: var(--pink-light);
+}
+
 a:link, a:visited{
 	color: var(--blue-dark);
 	border-bottom: 1px dotted var(--blue-dark);
@@ -648,7 +652,7 @@ big{
 
 #webring a:link, #webring a:visited, #webring a:hover, #webring a:focus{
     border-bottom: none;
-    box-shadow: none;
+    box-shadow: none!important;
 }
 
 #pagefooter #footerwrapper #webring, #singlefooter #footerwrapper #webring{
