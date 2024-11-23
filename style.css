@@ -18,6 +18,7 @@ Author URI: http://github.com/aroceu/
     --orange: #ffcba7;
     --pink-normal: #F5A49F;
     --pink-light: #ffc7c3;
+    --pink-lighter: #fccce1;
     --pink-kinda-dark: #f0958f;
     --text-light: #6e5f6b;
     --text-light-2: #6c5e69;
@@ -557,7 +558,8 @@ dd.tags a[rel~="tag"]:before{
 /************************ general text formatting ************************/
 
 ::selection {
-    background: var(--pink-light);
+    background: var(--pink-lighter);
+    color: #5a4a57;
 }
 
 a:link, a:visited{
