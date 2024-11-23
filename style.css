@@ -653,6 +653,11 @@ big{
     text-align: center;
 }
 
+#webring img{
+    height: 70px;
+    width: 90px;
+}
+
 #webring a:link, #webring a:visited, #webring a:hover, #webring a:focus{
     border-bottom: none;
     box-shadow: none!important;
