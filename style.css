@@ -641,14 +641,14 @@ big{
 #footerright{
     float: right;
     text-align: right;
-    width: 34%;
+    width: 33%;
     bottom: 0;
     position: relative;
 }
 
 #webring{
     padding-top: 1em;
-    width: 33%;
+    width: 34%;
     float: left;
 }
 
