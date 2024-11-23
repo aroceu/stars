@@ -641,11 +641,12 @@ big{
 }
 
 #webring{
+    padding-top: 1em;
     width: 33%;
     float: left;
 }
 
-#webring a{
+#webring a:link, #webring a:visited, #webring a:hover, #webring a:focus{
     border-bottom: none;
     box-shadow: none;
 }
