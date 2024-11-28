@@ -59,6 +59,11 @@ document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
             {
                 echo '<a href="'. get_field('ao3_link') .'">AO3 Mirror</a>';
             }
+
+            if(get_field('platform_link'))
+            {
+                echo '<a href="'. get_field('platform_link') .'">'. get_field('platform') .' Mirror</a>';
+            }
             
             ?>
         <a href="https://archiveofourown.org/external_works/new?url_from_external=<?php the_permalink() ?>" target="_blank">Bookmark on AO3</a></div>
