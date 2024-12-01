@@ -1285,6 +1285,11 @@ html {
     max-width: 75%;
 }
 
+#webring img {
+  display: block;
+  margin: 0 auto;
+}
+
 }
 
 /* ipad */
@@ -1591,6 +1596,11 @@ dt.invisi{
 	
 #ficpage #entry{
     width: 95%;
+}
+
+#webring img {
+  display: block;
+  margin: 0 auto;
 }
 
 }
