@@ -686,7 +686,7 @@ big{
     background: var(--back);
 	padding: 0.5em 1.5em;
     clear: both;
-	font: normal 95% 'Open Sans', 'Lucida Grande', sans-serif;
+	font: normal 90% 'Open Sans', 'Lucida Grande', sans-serif;
 	width: 65%;
 	margin: 0 auto;
 }
@@ -703,7 +703,7 @@ big{
     background: var(--back) url('stars.png');
     padding: 0.5em 1.5em;
     clear: both;
-	font: normal 95% 'Open Sans', 'Lucida Grande', sans-serif;
+	font: normal 90% 'Open Sans', 'Lucida Grande', sans-serif;
 }
 
 #footer a:link, #footer a:visited{
