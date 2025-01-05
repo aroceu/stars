@@ -647,6 +647,14 @@ big{
     position: relative;
 }
 
+.footersearchlinks{
+    margin-top: 4px;
+}
+
+#pagefooter .footersearchlinks{
+    margin-top: -11px;
+}
+
 #webring{
     padding-top: 3em;
     width: 34%;
