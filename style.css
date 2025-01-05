@@ -647,11 +647,11 @@ big{
     position: relative;
 }
 
-.footersearchlinks{
+p.footersearchlinks{
     margin-top: 4px;
 }
 
-#pagefooter .footersearchlinks{
+#pagefooter p.footersearchlinks{
     margin-top: -11px;
 }
 
