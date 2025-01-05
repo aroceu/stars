@@ -39,7 +39,7 @@ $terms = get_terms(
     array(
         'taxonomy'   => 'fandom',
         'hide_empty' => false,
-        'exclude' => array( 476, 479, 464, 497, 503, 511),
+        'exclude' => array( 476, 479, 464, 497, 503, 511, 548, 549),
         'orderby' => 'count',
 	'order' => 'DESC',
     )
