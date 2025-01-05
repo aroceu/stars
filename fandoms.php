@@ -21,11 +21,15 @@ get_header(); ?>
  <li><a href="https://aroceu.com/fic/fandom/tsn/">The Social Network</a> (<?php $term_by_id = get_term( 511, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2015 - 2017</i></small></li>	 
  <li><a href="https://aroceu.com/fic/fandom/haikyuu/">Haikyuu!!</a> (<?php $term_by_id = get_term( 479, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i> 2014 - 2016</i></small></li>	 
  <li><a href="https://aroceu.com/fic/fandom/1d">One Direction</a> (<?php $term_by_id = get_term( 497, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2012 - 2018</i></small></li>	 
-<li><a href="https://aroceu.com/fic/fandom/pokemon">Pokemon</a> (<?php $term_by_id = get_term( 503, 'fandom' ); echo $term_by_id->count; ?>)</b> <small>this one doesn't have a set timeframe, because I'll always love Pokemon</small></li>	 </ul>
+<li><a href="https://aroceu.com/fic/fandom/pokemon">Pokemon</a> (<?php $term_by_id = get_term( 503, 'fandom' ); echo $term_by_id->count; ?>)</b> <small>this one doesn't have a set timeframe, because I'll always love Pokemon</small></li>	 
+
+<li><a href="https://aroceu.com/fic/fandom/suju">Super Junior</a> (<?php $term_by_id = get_term( 549, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2009 - 2012</i></small></li>
+
+<li><a href="https://aroceu.com/fic/fandom/sp">South Park</a> (<?php $term_by_id = get_term( 548, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2008 - 2014</small></li>
+</ul>
 
 <h3>Minor Fandoms</h3>	 
 <p>These are fandoms I've written a handful of fics in (if not only one), with the attributed pairing treated similarly to a tag. I may return to these fandoms on occasion, but not regularly.</p>
-<p>A few of these are also old major fandoms that I've elected to not move the majority of my fics for to this site, and also have demoted down to a minor fandom, as I am now significantly less proud of my fic for them. They are not separated by pairing, and only a select few fics from those fandoms have been selected to be on this website, for consistent quality.</p>
 
 <ul class="pagelisttwocols">
 <?php

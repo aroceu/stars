@@ -13,7 +13,7 @@ $terms = get_terms(
     array(
         'taxonomy'   => 'fandom',
         'hide_empty' => false,
-        'include' => array( 476, 464, 511, 479, 497, 503),
+        'include' => array( 476, 464, 511, 479, 497, 503, 549, 548),
         'orderby' => 'include',
     )
 );
@@ -40,7 +40,7 @@ $terms = get_terms(
     array(
         'taxonomy'   => 'fandom',
         'hide_empty' => false,
-        'exclude' => array( 476, 479, 464, 497, 503, 511),
+        'exclude' => array( 476, 479, 464, 497, 503, 511, 549, 548),
     )
 );
 
