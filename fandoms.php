@@ -25,7 +25,7 @@ get_header(); ?>
 
 <li><a href="https://aroceu.com/fic/fandom/suju">Super Junior</a> (<?php $term_by_id = get_term( 549, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2009 - 2012</i></small></li>
 
-<li><a href="https://aroceu.com/fic/fandom/sp">South Park</a> (<?php $term_by_id = get_term( 548, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2008 - 2014</small></li>
+<li><a href="https://aroceu.com/fic/fandom/sp">South Park</a> (<?php $term_by_id = get_term( 548, 'fandom' ); echo $term_by_id->count; ?>)</b> <small><i>2008 - 2014</i></small></li>
 </ul>
 
 <h3>Minor Fandoms</h3>	 
