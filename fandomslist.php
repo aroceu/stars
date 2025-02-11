@@ -40,7 +40,7 @@ $terms = get_terms(
     array(
         'taxonomy'   => 'fandom',
         'hide_empty' => false,
-        'exclude' => array( 476, 479, 464, 497, 503, 511, 549, 548),
+        'exclude' => array( 476, 479, 464, 497, 503, 511, 549, 548, 716), /** 716 is youtube rpf **/
     )
 );
 
