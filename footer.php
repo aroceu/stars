@@ -95,4 +95,6 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 </script>
 
      </body>
+
+
 </html>
