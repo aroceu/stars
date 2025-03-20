@@ -20,9 +20,9 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<title><?php wp_title('/', true, 'right'); ?> <?php bloginfo('name'); ?> </title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="https://seas.ink/x/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="https://aroceu.com/assets/scripts/jquery-1.10.1.min.js"></script>
 	
-	<script type="text/javascript" src="https://seas.ink/x/animatedcollapse.js">
+	<script type="text/javascript" src="https://aroceu.com/assets/scripts/animatedcollapse.js">
 
 /***********************************************
 * Animated Collapsible DIV v2.4- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
