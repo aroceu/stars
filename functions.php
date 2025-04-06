@@ -60,6 +60,10 @@ function add_custom_taxonomies() {
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
   ));
   
   // Add new "Rating" taxonomy to Posts
@@ -86,6 +90,10 @@ function add_custom_taxonomies() {
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
   ));
   
   // Add new "Ship (specific relationship)" taxonomy to Posts
@@ -112,6 +120,10 @@ function add_custom_taxonomies() {
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
   ));
   
    // Add new "Relationship Category" taxonomy to Posts
@@ -138,6 +150,10 @@ function add_custom_taxonomies() {
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
   ));
   
   // Add new "Series" taxonomy to Posts
@@ -190,6 +206,10 @@ function add_custom_taxonomies() {
       'with_front' => false, // Don't display the category base before "/locations/"
       'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
     ),
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
   ));
   
 }
