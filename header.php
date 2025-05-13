@@ -1,9 +1,15 @@
 <!doctype html>
 <html lang="en">
     
-   <head>        <meta http-equiv="cache-control" content="public">
+   <head>        
+    <meta http-equiv="cache-control" content="public">
        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-               <meta name="robots" content="noai, noimageai">
+       <meta name="robots" content="noai, noimageai">
+	<meta name="description" content="<?php bloginfo('description'); ?>"/>
+	<meta property="og:title" content="aroceu's fic" />
+	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+	<meta property="og:image" content="https://aroceu.com/assets/preview.png" />
+	<meta property="og:url" content="https://aroceu.com/fic" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Cookie&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
